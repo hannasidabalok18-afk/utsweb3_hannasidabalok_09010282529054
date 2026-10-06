@@ -11,6 +11,10 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('dashboard') }}">Perpustakaan</a>
+                <div class="navbar-nav me-auto ms-3">
+                    <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
+                    <a class="nav-link" href="{{ route('books.index') }}">Daftar Buku</a>
+                </div>
                 <div class="d-flex align-items-center gap-3">
                     <span class="text-white">{{ auth()->user()->name }}</span>
                     <form action="{{ route('logout') }}" method="POST" class="m-0">
