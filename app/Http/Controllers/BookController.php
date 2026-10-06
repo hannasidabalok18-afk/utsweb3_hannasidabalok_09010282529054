@@ -78,11 +78,11 @@ class BookController extends Controller
     {
         return $request->validate([
             'category_id' => ['required', 'exists:categories,id'],
-            'title' => ['required', 'string', 'max:255'],
-            'author' => ['required', 'string', 'max:255'],
-            'publisher' => ['required', 'string', 'max:255'],
-            'year' => ['required', 'integer', 'min:1901', 'max:' . date('Y')],
-            'stock' => ['required', 'integer', 'min:0'],
+            'title'       => ['required', 'string', 'max:255'],
+            'author'      => ['required', 'string', 'max:255'],
+            'publisher'   => ['required', 'string', 'max:255'],
+            'year'        => ['required', 'integer', 'min:1901', 'max:' . date('Y')],
+            'stock'       => ['required', 'integer', 'min:0'],
         ]);
     }
 }

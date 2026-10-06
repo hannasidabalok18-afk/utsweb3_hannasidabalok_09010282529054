@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    --sage-dark: #3F4E40;       /* Deep Forest Sage */
+    --sage-main: #5C6E5D;       /* Medium Warm Sage */
+    --sage-accent: #829583;     /* Soft Sage Highlight */
+    --sage-light: #EBF0EC;      /* Sage Cream Tint */
+    --cream-bg: #F8F6F0;        /* Soft Warm Cream */
+    --cream-card: #FFFFFF;      /* Clean White */
+    --cream-border: #E8E2D5;    /* Delicate Border */
+    --text-primary: #222923;    /* Soft Charcoal */
+    --text-muted: #6C756D;      /* Warm Gray */
+}
+
+body {
+    background-color: var(--cream-bg) !important;
+    color: var(--text-primary) !important;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.01em;
+}
+
+/* --- SIDEBAR STYLES --- */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, var(--sage-dark) 0%, #2D392E 100%);
+    color: #ffffff;
+    padding: 24px 18px;
+    z-index: 100;
+    box-shadow: 4px 0 25px rgba(0, 0, 0, 0.04);
+}
+
+.sidebar .brand-logo {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    padding: 12px 14px;
+}
+
+.sidebar .nav-link {
+    color: #D3DDD4;
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .nav-link:hover {
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(4px);
+}
+
+.sidebar .nav-link.active {
+    background: #FFFFFF;
+    color: var(--sage-dark) !important;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- MAIN CONTENT LAYOUT --- */
+.main-content {
+    margin-left: 260px;
+    padding: 32px 40px;
+}
+
+/* --- BANNER WELCOME --- */
+.banner-welcome {
+    background: linear-gradient(135deg, var(--sage-dark) 0%, var(--sage-main) 100%);
+    color: white;
+    border-radius: 20px;
+    padding: 36px 40px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(63, 78, 64, 0.15);
+}
+
+.banner-welcome::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    bottom: -40px;
+    width: 220px;
+    height: 220px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* --- STATISTIC CARDS --- */
+.card-stat {
+    background-color: var(--cream-card);
+    border: 1px solid var(--cream-border);
+    border-radius: 20px;
+    transition: all 0.25s ease;
+}
+
+.card-stat:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(92, 110, 93, 0.08) !important;
+}
+
+.icon-box-sage {
+    width: 52px;
+    height: 52px;
+    background-color: var(--sage-light);
+    color: var(--sage-dark);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+/* --- QUICK ACCESS BUTTON --- */
+.btn-quick-add {
+    background: linear-gradient(135deg, var(--sage-dark) 0%, var(--sage-main) 100%);
+    color: white !important;
+    border-radius: 20px;
+    transition: all 0.25s ease;
+    border: none;
+}
+
+.btn-quick-add:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(63, 78, 64, 0.25);
+}
+
+/* --- ELEGANT TABLE STYLES --- */
+.custom-table-card {
+    background: var(--cream-card);
+    border: 1px solid var(--cream-border);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.table {
+    margin: 0;
+}
+
+.table thead th {
+    background-color: #F3EFE6 !important;
+    color: var(--sage-dark) !important;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 16px 20px;
+    border: none;
+}
+
+.table tbody td {
+    padding: 18px 20px;
+    border-bottom: 1px solid #F2EEE5;
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table tbody tr {
+    transition: background 0.15s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #FAF8F3 !important;
+}
+
+/* --- BADGES & BUTTONS --- */
+.badge-sage {
+    background-color: var(--sage-light);
+    color: var(--sage-dark);
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+}
+
+.btn-sage-primary {
+    background-color: var(--sage-dark);
+    color: white;
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    transition: all 0.2s;
+}
+
+.btn-sage-primary:hover {
+    background-color: var(--sage-main);
+    color: white;
+}
